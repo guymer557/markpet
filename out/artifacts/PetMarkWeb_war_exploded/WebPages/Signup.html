@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>MarkPet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../common/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../common/bootstrap.min.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Secular+One" rel="stylesheet">
+    <link href="../common/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <!--<link rel="stylesheet" href="../css/Market.css">-->
+    <link rel="stylesheet" href="../common/Animate/Animals.css">
+    <script src="../common/jquery-2.0.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div class="container">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="homepage.html"><img class="top_menu_pic" src="../common/Logomakr_60B8jI.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Market.html" id="miniHeaderNav">שוק מוצרי בעלי החיים רק בשבילך!</a></li>
+                    <li><a href="#contact">צור קשר</a></li>
+                    <!--<li><a href="#signup">התחבר<i class="fa fa-user"></i></a></li>-->
+                    <!--<li><a href="#portfolio"> חדש באתר</a></li>-->
+                    <li><a href="Cart.html"><i class="fa fa-shopping-cart fa-2x"><span id="cartBadgeValue" class="badge"></span></i></a></li>
+                    <!--<li><a href="#services">שרותים</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Container (signup Section) -->
+    <div id="signup" class="container-fluid" style="display: none;">
+        <div class="row singupForm">
+            <div class="col-sm-12 col-xs-12">
+                <form method="GET" name=formLogin onsubmit="return signupUser()">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h1>הרשמה</h1>
+                        </div>
+                        <div class="panel-body">
+                            <div><input id="emailUser" type="email" name="userMail" class="email form-control" placeholder="דואר אלקטרוני..." /> </div>
+                            <p style="float: right"><span  class="fa fa-lock"></span>לעולם לא נפרסם את כתובת הדוא"ל שלך</p>
+                            <p><input id="passwordUser" type="password" name="password" class="password form-control" placeholder="בחר סיסמא"/> </p>
+                            <p><input type="password" name="password" class="form-control" placeholder="הקלד שוב סיסמא"/> </p>
+                            <p><input id="nameUser" type="text" name="userName" class="form-control" placeholder="בחר שם לתצוגה"/> </p>
+
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" value="Login" class="btn btn-lg">הצטרף</button><br>
+                            <label id="oldUser" class="btn btn-xs">משתמש קיים</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (signin Section) -->
+    <div id="signin" class="container-fluid">
+        <div class="row singupForm">
+            <div class="col-sm-12 col-xs-12">
+                <form method="GET" name=formLogin onsubmit="return signinUser()">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h1>התחברות</h1>
+                        </div>
+                        <div class="panel-body">
+                            <p id="errors" style="color: red"></p>
+                            <div><input type="email" name="userMail" class="userMail form-control" placeholder="דואר אלקטרוני..." /> </div>
+                            <p><input type="password" name="password" class="passwordUser form-control" placeholder="בחר סיסמא"/> </p>
+
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" value="Login" class="btn btn-lg">התחבר</button><br>
+                            <label id="newUser" class="btn btn-xs">משתמש חדש</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center">צור קשר</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>צרו עמנו קשר ונחזור אליכם תוך 24 שעות!</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Tel Aviv, IL</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +972 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> markpet@gmail.com</p>
+            </div>
+            <div class="col-sm-7 slideanim">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    To use this code on your website, get a free API key from Google.
+    Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+    -->
+
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>כל הזכויות שמורות <a href="#">www.MarkPet.com</a></p>
+    </footer>
+
+</div>
+<script type="text/javascript" src="../js/utils.js"></script>
+<script type="text/javascript" src="../js/Signup.js"></script>
+
+</body>
+</html>

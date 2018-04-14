@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>MarkPet</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Secular+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="../common/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../common/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Cart.css">
+    <link rel="stylesheet" type="text/css" href="../css/utils.css">
+    <link rel="stylesheet" type="text/css" href="../common/Loader/Loader3.css">
+    <script type="text/javascript" src="../common/jquery-2.0.3.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="homepage.html"><img class="top_menu_pic" src="../common/Logomakr_60B8jI.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+                <li><form class="form-inline my-2 my-lg-0 nav_search_form" action="../SearchServlet" onsubmit="return submitSearchForm()">
+                    <button class="submitSearchButton btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <input class="search-holder form-control mr-sm-2" type="text" placeholder="אני רוצה לקנות...">
+                </form></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="#contact">צור קשר</a></li>
+                <li id="signin"><a href="Signup.html">התחבר<i class="fa fa-user"></i></a></li>
+                <!--<li><a href="#services">שרותים</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="row text-center AnimalDiv">
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('כלב');">
+            <img src="../common/dog1.png ">
+            <h4>כלבים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 200px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">מזון יבש</a>
+                    <!--<a>מזון יבש</a>-->
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">שימורים ומעדנים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">חטיפים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">מזון רפואי</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('חתול');">
+            <img src="../common/cat.png">
+            <h4>חתולים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">מזון יבש</a>
+                    <!--<a>מזון יבש</a>-->
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">שימורים ומעדנים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">חטיפים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">מזון רפואי</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('ציפור');">
+            <img src="../common/bird.png">
+            <h4>ציפורים</h4>
+        </div>
+        <!-- <div class="submenu hvr-grow" style="width: 400px;">
+             <ul>
+                 <li>
+                     <a href="#" onclick="return CategoryClicked(this, 'ציפור');">מזון יבש</a>
+                 </li>
+                 <li>
+                     <a>שימורים ומעדנים</a>
+                 </li>
+             </ul>
+         </div>-->
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('דג');">
+            <img src="../common/fish.png">
+            <h4>דגי נוי</h4>
+        </div>
+        <!--    <div class="submenu hvr-grow" style="width: 400px;">
+                <ul>
+                    <li>
+                        <a>מזון יבש</a>
+                    </li>
+                    <li>
+                        <a>שימורים ומעדנים</a>
+                    </li>
+                </ul>
+            </div>-->
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('זוחל');">
+            <img src="../common/snake.png">
+            <h4>זוחלים</h4>
+        </div>
+        <!--    <div class="submenu hvr-grow" style="width: 400px;">
+                <ul>
+                    <li>
+                        <a>מזון יבש</a>
+                    </li>
+                    <li>
+                        <a>שימורים ומעדנים</a>
+                    </li>
+                </ul>
+            </div>-->
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('מכרסמים');">
+            <img src="../common/rabbit.png">
+            <h4>מכרסמים</h4>
+        </div>
+        <!--  <div class="submenu hvr-grow" style="width: 400px;">
+              <ul>
+                  <li>
+                      <a>מזון יבש</a>
+                  </li>
+                  <li>
+                      <a>שימורים ומעדנים</a>
+                  </li>
+              </ul>
+          </div>-->
+    </div>
+</div>
+
+<div class="container" id="userWelcome" style="display: none;">
+    <label></label>
+    <a href="#" onclick="return Logout()">התנתק</a>
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-8">
+        <div class=" well">
+
+            <div class="search-resultes">
+
+                <!--=======products results header div=============================-->
+                <div class="filter_div" style="direction: rtl;">
+                    <label>מיין לפי:</label>
+                    <label onclick="SortProductsByPrice(1)" type="button" class="btn btn-info btn-xs hvr-float-shadow">מחיר<i class="fa fa-arrow-up" aria-hidden="true"></i></label>
+                    <label onclick="SortProductsByPrice(0)" type="button" class="btn btn-info btn-xs hvr-float-shadow">מחיר<i class="fa fa-arrow-down" aria-hidden="true"></i></label>
+                </div>
+
+                <!--=====================================-->
+                <!--==========products result div===========================-->
+                <div class="prod_list_div">
+
+                </div>
+                <!--products pager div-->
+                <div class="prod_pager text-center">
+
+                    <ul class="pagination modal-5"  style = "display: none" >
+                        <li><a href="#" class="prev fa fa-arrow-left"> </a></li>
+                        <li> <a href="#">1</a></li>
+                        <li> <a href="#">2</a></li>
+                        <li> <a href="#">3</a></li>
+                        <li> <a href="#">4</a></li>
+                        <li><a href="#" class="active">5</a></li>
+                        <li> <a href="#">6</a></li>
+                        <li> <a href="#">7</a></li>
+                        <li> <a href="#">8</a></li>
+                        <li> <a href="#">9</a></li>
+                        <li><a href="#" class="next fa fa-arrow-right"></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class=" cartDescriptionDiv well">
+            <div  class="row">
+
+                <div style="float: right" class="col-lg-6">
+                    <label >הפריטים שלי</label><br><hr>
+                    <p>כמות:<span style="margin: 10px;" class="amount"></span></p><br>
+                    <p>סה"כ:<span style="margin: 10px;" class="totalPrice"></span></p><br>
+                </div>
+                <!--<div class="col-lg-3"><label >לפי מותג</label><br></div>-->
+                <!--<div class="col-lg-3"><label >לפי מותג</label><br></div>-->
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="../js/utils.js"></script>
+<script type="text/javascript" src="../js/Cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-08-08 17:15:50 #1 store] 
+Database 'C:\Users\davej\IdeaProjects\PetMarkProject\out\artifacts\PetMarkWeb_war_exploded\WEB-INF\db\MarkPet2.odb' is opened by 7964@DESKTOP-7GOSAU4
+
+[2017-08-08 17:15:50 #2 type] 
+Type websites.WebSite is not enhanced.
+
+[2017-08-08 17:15:50 #3 type] 
+Type Products.Product is not enhanced.
+
+[2017-08-09 01:54:44 #4 store] 
+Database 'C:\Users\davej\IdeaProjects\PetMarkProject\out\artifacts\PetMarkWeb_war_exploded\WEB-INF\db\MarkPet2.odb' is closed by 7964@DESKTOP-7GOSAU4
+

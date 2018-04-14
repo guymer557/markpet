@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CategoryMarket</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Secular+One" rel="stylesheet">
+    <link href="../common/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../common/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/Market.css">-->
+    <link type="text/css" rel="stylesheet" href="../common/pagination/simplePagination.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/CategoryMarket.css">
+    <link rel="stylesheet" type="text/css" href="../css/utils.css">
+    <link rel="stylesheet" href="../common/pager-styling.css">
+    <!--<link rel="stylesheet" href="../common/Loader/Loader.css">-->
+    <link rel="stylesheet" href="../common/Loader/Loader3.css">
+    <script type="text/javascript" src="../common/jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/AdminStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/DBInsertionPage.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<body style="font-family: 'Varela Round', sans-serif;">
+<!--==========TOPNAV=================================-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="homepage.html"><img class="top_menu_pic" src="../common/Logomakr_60B8jI.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+                <li><form class="form-inline my-2 my-lg-0 nav_search_form" action="../SearchServlet" onsubmit="return submitSearchForm()">
+                    <button class="submitSearchButton btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <input class="search-holder form-control mr-sm-2" type="text" placeholder="אני רוצה לקנות...">
+                </form></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="#contact">צור קשר</a></li>
+                <li><a href="#signup">הירשם</a></li>
+                <li><a href="Cart.html"><i class="fa fa-shopping-cart fa-2x"><span id="cartBadgeValue" class="badge"></span></i></a></li>
+
+                <!--<li><a href="#services">שרותים</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="row text-center AnimalDiv">
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('כלב');">
+            <img src="../common/dog1.png ">
+            <h4>כלבים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 200px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">מזון יבש</a>
+                    <!--<a>מזון יבש</a>-->
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">שימורים ומעדנים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">חטיפים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">מזון רפואי</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">רצועות וקולרים</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('חתול');">
+            <img src="../common/cat.png">
+            <h4>חתולים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">מזון יבש</a>
+                    <!--<a>מזון יבש</a>-->
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">שימורים ומעדנים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">חטיפים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">מזון רפואי</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('ציפור');">
+            <img src="../common/bird.png">
+            <h4>ציפורים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'ציפור');">מזון</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'ציפור');">צעצועים</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('דג');">
+            <img src="../common/fish.png">
+            <h4>דגי נוי</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'דג');">מזון</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('זוחל');">
+            <img src="../common/snake.png">
+            <h4>זוחלים</h4>
+        </div>
+        <!--    <div class="submenu hvr-grow" style="width: 400px;">
+                <ul>
+                    <li>
+                        <a>מזון יבש</a>
+                    </li>
+                    <li>
+                        <a>שימורים ומעדנים</a>
+                    </li>
+                </ul>
+            </div>-->
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('מכרסמים');">
+            <img src="../common/rabbit.png">
+            <h4>מכרסמים</h4>
+        </div>
+        <!--  <div class="submenu hvr-grow" style="width: 400px;">
+              <ul>
+                  <li>
+                      <a>מזון יבש</a>
+                  </li>
+                  <li>
+                      <a>שימורים ומעדנים</a>
+                  </li>
+              </ul>
+          </div>-->
+    </div>
+
+</div>
+
+<div class="container path">
+    <!--<span class="badge">כלבים</span>-->
+</div>
+
+
+
+
+<div class="container well">
+    <div class="row" id="FormRow" >
+ <div class="col-lg-6 inputData">
+        <form method="POST" id="WebSiteSubmit"  name="AddWebsiteForm" onsubmit="SubmitWebsiteToDB(event)">
+            <!--<div class="inputData">-->
+                <label for="WebSiteURL">כתובת האתר:</label>
+                <input type="text" id="WebSiteURL" name="WebSiteURL" class="WebSiteURL" value="http://" required/><br>
+                <span id="ProductPathElementsTextBoxes">
+                    <label for="ProductPath">נתיב בחירת מוצר:</label>
+                    <input id="ProductPath" type="text" name="e1" class="ProductPath" required />
+                </span>
+                <!--<a title="This is some information for our tooltip."-->
+                <!--class="ButtonAddTextBox tip" onclick="AddProductsIdentifier()">+</a>-->
+                <button onclick="AddProductPathElement(event)" title="Click to add another product identifier.&#13;&#10;Add as much as needed to identify website products.
+                                                    &#13;&#10;Note that search will loop in the order of given identifiers."><i class="fa fa-plus"></i></button>
+                <button class="fa-fa-Disabled" onclick="RemoveProductPathElement(event)" title="Click to add another product identifier.&#13;&#10;Add as much as needed to identify website products.
+                                                    &#13;&#10;Note that search will loop in the order of given identifiers." disabled = "true"><i class="fa fa-minus"></i></button><br>
+                <label for="CSSProductNameSelector">שם מוצר:</label>
+                <input id="CSSProductNameSelector" type="text" name="CSSProductNameSelector" class="CSSProductNameSelector" required/><br>
+                <label for="CSSProductPriceSelector">מחיר המוצר:</label>
+                <input id="CSSProductPriceSelector" type="text" name="CSSProductPriceSelector" class="CSSProductPriceSelector" required/><br>
+                <label for="CSSImageUrlSelector">קישור לתמונת המוצר:</label>
+                <input id="CSSImageUrlSelector" type="text" name="CSSImageUrlSelector" class="CSSImageUrlSelector" required /><br>
+                <label for="CSSProductUrlSelector">קישור למוצר:</label>
+                <input id="CSSProductUrlSelector" type="text" name="CSSProductUrlSelector" class="CSSProductUrlSelector" required /><br>
+                <label for="CSSProductCategorySelector">קטגוריית המוצר:</label>
+                <input id="CSSProductCategorySelector" type="text" name="CSSProductCategorySelector" class="CSSProductCategorySelector" required /><br>
+                <label for="CSSAnimalCategorySelector">קטגוריית החיה:</label>
+                <input id="CSSAnimalCategorySelector" type="text" name="CSSAnimalCategorySelector" class="CSSAnimalCategorySelector" required /><br>
+                <label for="LogoImageUrl">לוגו האתר:</label>
+                <input id="LogoImageUrl" type="text" name="LogoImageUrl" class="LogoImageUrl" /><br>
+                <label for="ShippingCost">עלות משלוח:</label>
+                <input id="ShippingCost" type="text" name="ShippingCost" class="ShippingCost" /><br>
+                <label for="DelayTime">זמן השהייה:</label>
+                <input id="DelayTime" type="text" name="DelayTime" class="DelayTime" value="2000" required/><br>
+                <!--<label>האם חלק מקטגוריות המוצרים מחולקות למספר דפים?</label><br>-->
+                <!--<input type="radio" name="pageSeparate" id="pageSeparate" class="pageSeparate" value="true" checked/><label for="pageSeparate" class="pageSeparate">כן</label><br>-->
+                <!--<input type="radio" name="pageSeparate" id="pageSeparate2" class="pageSeparate" value="false" /><label for="pageSeparate2" class="pageSeparate">לא</label><br>-->
+                <label>שיטת ניתוח / Parse Way:</label>
+                <select class="parseWay" name="parseWay" onchange="ParseWaySelected(this.value)">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select><br>
+                <button type="submit" class="btn btn-primary" id="scanSitebtn">סרוק אתר</button><br>
+        </form>
+
+
+        <div id="progressbar">
+            <div class="progress-label">בטעינה...</div>
+        </div>
+     </div>
+
+
+
+    <div class="col-lg-6 messageBoxCol">
+        <div class="row">
+           <textarea class="messageBox" wrap="off" readonly></textarea>
+        </div>
+
+        <div class="row">
+            <div class="messageBoxBtns"></div>
+        </div>
+            <!--<div class="row">-->
+                <!--<div style="text-align:right" class="col-lg-3 btnApprove"></div>-->
+                <!--<div style="text-align:left" class="col-lg-3 btnReset"></div>-->
+            <!--</div>-->
+        </div>
+    <!--=======loader div=============================-->
+    <div class="bubbles" style="display: none" >
+        <span></span>
+        <span id="bubble2"></span>
+        <span id="bubble3"></span>
+    </div>
+    <!--===========================================-->
+
+
+        <!--==========products result div===========================-->
+        <div class="prod_list_div">
+
+        </div>
+        <!--products pager div-->
+
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="pagination-holder clearfix">
+        <div id="light-paginationBottom" class="pagination">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="jumbotron">
+    <div class="container-fluid text-right">
+        <div class="row">
+            <div class="col-lg-4 border-right">
+                <a href="#"><img align="left" class="top_menu_pic" src="../common/markpetheader3.png" height="40" weight="80"></a>
+                <p>כל הזכויות שמורות לגיא ארדמן בלבד</p>
+
+            </div>
+            <div class="col-lg-4 border-right">
+                <p>:החברה שלנו</p>
+                <p><a href="#" class="hvr-float-shadow">אודות</a></p>
+                <p><a href="#" class="hvr-float-shadow">צור קשר</a></p>
+            </div>
+            <div class="col-lg-4 border-right">
+                <p>איך הגעתם לפה תעלו למעלה</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--=======================================================-->
+<!--=====================================================-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<!--<script src='https://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script>-->
+
+<script type="text/javascript" src="../js/DBInsertionPage.js"></script>
+<!--<script type="text/javascript" src="../js/CategoryMarket.js"></script>-->
+<script type="text/javascript" src="../js/utils.js"></script>
+<script type="text/javascript" src="../common/pagination/jquery.simplePagination.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--<script>$('.messageBoxCol').css({"height" : $('.col-lg-6.inputData').css('height')})</script>-->
+
+</body>
+</html>
+

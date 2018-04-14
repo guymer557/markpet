@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Administrator</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/AdminStyle.css">
+
+</head>
+<body onLoad="OnLoad()">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="content">
+                <h1>Admin Page</h1>
+                <!--<h2>Please enter your name:</h2>-->
+                <form method="POST"  name="AddWebsiteForm" onsubmit="SubmitWebsite()">
+                    <input type="text" name="URL" class="URL" placeholder="Enter URL..." />
+                    <div id="ProductsIdentifiersTextBoxes">
+                        <input type="text" name="i1" class="ProductsIdentifier" placeholder="Enter products identifier..." /><br>
+                    </div>
+                    <!--<a title="This is some information for our tooltip."-->
+                            <!--class="ButtonAddTextBox tip" onclick="AddProductsIdentifier()">+</a>-->
+                    <button onclick="AddProductsIdentifier(event)" title="Click to add another product identifier.&#13;&#10;Add as much as needed to identify website products.
+                                &#13;&#10;Note that search will loop in the order of given identifiers."><i class="fa fa-plus"></i></button><br>
+                    <button type="submit" class="btn btn-primary">Submit</button><br>
+                </form>
+                <button onclick="UpdateDataBase()">Update DataBase</button>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="content">
+                <h1>submit product model</h1>
+                <form method="POST"  name="AddProductModelForm" onsubmit="SubmitProductModel()">
+                    <input type="text" name="englishName" class="englishName" placeholder="Enter name in english..." />
+                    <input type="text" name="hebrewName" class="hebrewName" placeholder="Enter name in hebrew..." />
+                    <input type="text" name="Company" class="Company" placeholder="Enter product company..." />
+                    <input type="text" name="Image" class="Image" placeholder="Enter product image..." />
+                    <input type="text" name="Category" class="Category" placeholder="Enter product category..." />
+                    <input type="text" name="AnimalCategory" class="AnimalCategory" placeholder="Enter product animal category..." />
+                    <button type="submit" class="btn btn-primary">Submit</button><br>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <form onsubmit="addComment(event)">
+                <textarea id="comment" style="direction: rtl;" rows="4" cols="50" placeholder="הוסף תגובה..." required></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="col-lg-12">
+            <form onsubmit="initProductModel(event)">
+                <input type="submit" value="init product model">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div  id="services" class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-sm-2 AnimalMenu">
+                        <div class="menu hvr-underline-reveal">
+                            <img src="../common/hp_dog.png">
+                            <h4>כלבים</h4>
+                        </div>
+                        <div class="submenu" style="width: 200px;">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'כלבים');">מזון יבש</a>
+                                    <!--<a>מזון יבש</a>-->
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'כלבים');">שימורים ומעדנים</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'כלבים');">חטיפים</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'כלבים');">מזון רפואי</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'כלבים');">רצועות וקולרים</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2 AnimalMenu">
+                        <div class="menu hvr-underline-reveal">
+                            <img src="../common/hp_cat.png">
+                            <h4>חתולים</h4>
+                        </div>
+                        <div class="submenu" style="width: 400px;">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'חתולים');">מזון יבש</a>
+                                    <!--<a>מזון יבש</a>-->
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'חתולים');">שימורים ומעדנים</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'חתולים');">חטיפים</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'חתולים');">מזון רפואי</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2 AnimalMenu">
+                        <div class="menu hvr-underline-reveal">
+                            <img src="../common/hp_cat.png">
+                            <h4>ציפורים</h4>
+                        </div>
+                        <div class="submenu" style="width: 400px;">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'ציפורים');">מזון</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'ציפורים');">צעצועים</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 AnimalMenu">
+                        <div class="menu hvr-underline-reveal">
+                            <img src="../common/hp_cat.png">
+                            <h4>דגי נוי</h4>
+                        </div>
+                        <div class="submenu" style="width: 400px;">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="return updateCategory(this, 'דגי נוי');">מזון</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 AnimalMenu">
+                        <div class="menu hvr-underline-reveal">
+                            <img src="../common/hp_cat.png">
+                            <h4>זוחלים</h4>
+                        </div>
+                        <div class="submenu" style="width: 400px;">
+                            <ul>
+                                <li>
+                                    <a>מזון יבש</a>
+                                </li>
+                                <li>
+                                    <a>שימורים ומעדנים</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 AnimalMenu">
+                        <div class="menu hvr-underline-reveal">
+                            <img src="../common/hp_cat.png">
+                            <h4>מכרסמים</h4>
+                        </div>
+                        <div class="submenu" style="width: 400px;">
+                            <ul>
+                                <li>
+                                    <a>מזון יבש</a>
+                                </li>
+                                <li>
+                                    <a>שימורים ומעדנים</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../js/AdminControl.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <!--<title>Adminstrator Section</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form method="POST" onsubmit="AddWebSiteClick(name)">-->
+    <!--URL: <input type="text" name="name" class="url" />-->
+    <!--<input type="submit" value="Add" />-->
+<!--</form>-->
+
+<!--<div class="panel panel-default">-->
+    <!--<div class="panel-body">-->
+        <!--Supported Sites:-->
+    <!--</div>-->
+    <!--<div class="panel-users">-->
+
+    <!--</div>-->
+
+<!--</div>-->
+
+
+
+
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>-->
+<!--<script type="text/javascript" src="AddGuestControl.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->

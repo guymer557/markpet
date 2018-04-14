@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Market</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+    <!--&lt;!&ndash; jQuery library &ndash;&gt;-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+    <!--&lt;!&ndash; Latest compiled JavaScript &ndash;&gt;-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Secular+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="../common/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../common/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../common/pagination/simplePagination.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/utils.css">
+    <!--<link rel="stylesheet" href="../common/pager-styling.css">-->
+    <!--<link rel="stylesheet" href="../common/Loader/Loader.css">-->
+    <link rel="stylesheet" href="../common/Loader/Loader3.css">
+
+</head>
+<body style="font-family: 'Varela Round', sans-serif;">
+<!--==========TOPNAV=================================-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="homepage.html"><img class="top_menu_pic" src="../common/Logomakr_60B8jI.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+                <li><form class="form-inline my-2 my-lg-0 nav_search_form" action="../SearchServlet" onsubmit="return submitSearchForm()">
+                    <button class="submitSearchButton btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                    <select class="selectpicker form-control">
+                        <option value="local">חפש בדף</option>
+                        <option value="all">חפש בכל האתר</option>
+                    </select>
+                    <input class="search-holder form-control mr-sm-2" type="text" placeholder="אני רוצה לקנות...">
+                </form></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="#contact">צור קשר</a></li>
+                <li id="signin"><a href="Signup.html">התחבר<i class="fa fa-user"></i></a></li>
+                <li><a href="Cart.html"><i class="fa fa-shopping-cart fa-2x"><span id="cartBadgeValue" class="badge"></span></i></a></li>
+                <!--<li><a href="#services">שרותים</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="row text-center AnimalDiv">
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('כלב');">
+            <img src="../common/dog1.png ">
+            <h4>כלבים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 200px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">מזון יבש</a>
+                    <!--<a>מזון יבש</a>-->
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">שימורים ומעדנים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">חטיפים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">מזון רפואי</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'כלב');">רצועות וקולרים</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('חתול');">
+            <img src="../common/cat.png">
+            <h4>חתולים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">מזון יבש</a>
+                    <!--<a>מזון יבש</a>-->
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">שימורים ומעדנים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">חטיפים</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'חתול');">מזון רפואי</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('ציפור');">
+            <img src="../common/bird.png">
+            <h4>ציפורים</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'ציפור');">מזון</a>
+                </li>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'ציפור');">צעצועים</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('דג');">
+            <img src="../common/fish.png">
+            <h4>דגי נוי</h4>
+        </div>
+        <div class="submenu hvr-grow" style="width: 400px;">
+            <ul>
+                <li>
+                    <a href="#" onclick="return CategoryClicked(this, 'דג');">מזון</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('זוחל');">
+            <img src="../common/snake.png">
+            <h4>זוחלים</h4>
+        </div>
+        <!--    <div class="submenu hvr-grow" style="width: 400px;">
+                <ul>
+                    <li>
+                        <a>מזון יבש</a>
+                    </li>
+                    <li>
+                        <a>שימורים ומעדנים</a>
+                    </li>
+                </ul>
+            </div>-->
+    </div>
+    <div class="col-sm-2 col-xs-12 AnimalMenu" >
+        <div class="menu hvr-underline-reveal" onclick="AnimalCategoryClicked('מכרסמים');">
+            <img src="../common/rabbit.png">
+            <h4>מכרסמים</h4>
+        </div>
+        <!--  <div class="submenu hvr-grow" style="width: 400px;">
+              <ul>
+                  <li>
+                      <a>מזון יבש</a>
+                  </li>
+                  <li>
+                      <a>שימורים ומעדנים</a>
+                  </li>
+              </ul>
+          </div>-->
+    </div>
+
+</div>
+
+<div class="container" id="userWelcome" style="display: none;">
+    <label></label>
+    <a href="#" onclick="return Logout()">התנתק</a>
+</div>
+
+<div class="container path">
+    <!--<span class="badge">כלבים</span>-->
+</div>
+
+
+
+<div class="container search-div well">
+    <div  class="row">
+
+        <div style="float: right" class="col-lg-3">
+            <label >לפי חיה</label><br>
+            <div id="animals">
+
+            </div>
+        </div>
+
+        <div id="categoriesDiv" style="display:none; float: right" class="col-lg-3">
+            <label >לפי קטגוריה</label><br>
+            <div id="categories">
+
+            </div>
+        </div>
+
+        <div style="float: right" class="col-lg-3">
+            <label >לפי מחיר</label><br>
+            <div id="prices">
+                <a value="מחיר עד 50" name = "0 50">עד 50 ₪</a><br>
+                <a value="מחיר 100 - 50" name = "50 100">100 - 50 ₪</a><br>
+                <a value="מחיר 200 - 100" name = "100 200">200 - 100 ₪</a><br>
+                <a value="מחיר מעל 200" name="201">מעל 200 ₪</a><br>
+            </div>
+        </div>
+        <!--<div class="col-lg-3"><label >לפי מותג</label><br></div>-->
+        <!--<div class="col-lg-3"><label >לפי מותג</label><br></div>-->
+    </div>
+
+    <!--<div class="container select_elements_div row">-->
+    <!--<label style="float: right">לפי מותג</label><br>-->
+    <!--<select class="selectpicker hvr-glow" name="animalID" id="animal_selection">-->
+    <!--<option value="" selected disabled>חיה</option>-->
+    <!--<option value="all">הכל</option>-->
+    <!--<option value="כלב">כלב</option>-->
+    <!--<option value="חתול">חתול</option>-->
+    <!--</select>-->
+
+    <!--<select class="selectpicker hvr-glow" name="priceID" id="price_selection">-->
+    <!--<option value="" selected disabled>מחיר עד</option>-->
+    <!--<option>הכל</option>-->
+    <!--<option value="100"> ₪100</option>-->
+    <!--<option value="500"> ₪500</option>-->
+    <!--<option value="1000"> ₪1000</option>-->
+    <!--</select>-->
+    <!--<label onclick="submitSearchDiv()" class="btn btn-info search-button hvr-float-shadow">-->
+
+    <!--חפש-->
+    <!--</label>-->
+    <!--<textarea id="query" style="direction: ltr"  rows="4" cols="50"> </textarea>-->
+    <!--<button onclick="runQuery()">run</button>-->
+    <!--</div>-->
+</div>
+
+<div class="container well">
+
+
+    <!--=======loader div=============================-->
+    <div class="bubbles" style="display: none">
+        <span></span>
+        <span id="bubble2"></span>
+        <span id="bubble3"></span>
+    </div>
+    <div class="loader" style="display: none; direction: ltr">
+        <div class="load">
+            <div class="gear one">
+                <svg id="blue" viewbox="0 0 100 100" fill="#94DDFF">
+                    <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                </svg>
+            </div>
+            <div class="gear two">
+                <svg id="pink" viewbox="0 0 100 100" fill="#FB8BB9">
+                    <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                </svg>
+            </div>
+            <div class="gear three">
+                <svg id="yellow" viewbox="0 0 100 100" fill="#FFCD5C">
+                    <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                </svg>
+            </div>
+            <div class="lil-circle"></div>
+            <svg class="blur-circle">
+                <filter id="blur">
+                    <fegaussianblur in="SourceGraphic" stddeviation="13"></fegaussianblur>
+                </filter>
+                <circle cx="70" cy="70" r="66" fill="transparent" stroke="transparent" stroke-width="40" filter="url(#blur)"></circle>
+            </svg>
+
+        </div>
+    <div class="text" style="color: dimgray; direction: rtl; ">מחפש מוצרים...</div>
+    </div>
+    <!--===========================================-->
+
+    <div class="search-resultes" >
+
+        <!--=======products results header div=============================-->
+        <div class="prod_count_div text-right  ">
+                <h4>
+                !נמצאו <span class="prod_count_span badge"></span> מוצרים בשבילך
+                </h4>
+
+        </div>
+
+        <div class="filter_div" style="direction: rtl;">
+            <label>מיין לפי:</label>
+            <label onclick="SortProductsByPrice(1)" type="button" class="btn btn-info btn-xs hvr-float-shadow">מחיר<i class="fa fa-arrow-up" aria-hidden="true"></i></label>
+            <label onclick="SortProductsByPrice(0)" type="button" class="btn btn-info btn-xs hvr-float-shadow">מחיר<i class="fa fa-arrow-down" aria-hidden="true"></i></label>
+        </div>
+
+        <div class="container">
+            <div class="pagination-holder clearfix">
+                <div id="light-paginationTop" class="pagination">
+
+                </div>
+            </div>
+        </div>
+
+        <!--=====================================-->
+        <!--==========products result div===========================-->
+        <div class="prod_list_div">
+
+        </div>
+
+    </div>
+
+    <!--products pager div-->
+</div>
+
+<div class="container">
+<div class="pagination-holder clearfix">
+    <div id="light-paginationBottom" class="pagination">
+
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="jumbotron">
+    <div class="container-fluid text-right">
+        <div class="row">
+            <div class="col-lg-4 border-right">
+                <a href="#"><img align="left" class="top_menu_pic" src="../common/markpetheader3.png" height="40" weight="80"></a>
+                <p>כל הזכויות שמורות לגיא ארדמן בלבד</p>
+
+            </div>
+            <div class="col-lg-4 border-right">
+                <p>:החברה שלנו</p>
+                <p><a href="#" class="hvr-float-shadow">אודות</a></p>
+                <p><a href="#" class="hvr-float-shadow">צור קשר</a></p>
+            </div>
+            <div class="col-lg-4 border-right">
+                <p>איך הגעתם לפה תעלו למעלה</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--=======================================================-->
+<!--=====================================================-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<!--<script src='https://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script>-->
+
+
+<script type="text/javascript" src="../js/Market.js"></script>
+<script type="text/javascript" src="../js/utils.js"></script>
+<script type="text/javascript" src="../common/pagination/jquery.simplePagination.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!--<%&#45;&#45;-->
+<!--Created by IntelliJ IDEA.-->
+<!--DataBase.User: davej-->
+<!--Date: 4/12/2017-->
+<!--Time: 10:31 AM-->
+<!--To change this template use File | Settings | File Templates.-->
+<!--&#45;&#45;%>-->
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<!--<html>-->
+<!--<head>-->
+<!--<title>$PetMark$</title>-->
+<!--<a href="WebPages/AdminPage.html">Submit website</a><br>-->
+<!--<a href="WebPages/guest.jsp">Sign in</a>-->
+<!--</head>-->
+<!--<body>-->
+<!--$END$-->
+<!--</body>-->
+<!--</html>-->

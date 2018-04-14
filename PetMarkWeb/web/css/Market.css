@@ -1,0 +1,120 @@
+
+.navbar {
+    overflow: hidden;
+    background-color: gainsboro;
+    height: 70px;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    /*  background-image: url("/PetMark/common/navpicture.jpg");*/
+}
+
+
+.navbar a{
+    background-color: #ddd;
+    color: black;
+}
+
+.nav_search_form{
+    padding-left: 100px;
+    padding-top: 7px;
+}
+
+.hvr-float-shadow{
+    cursor: pointer;
+}
+
+
+.search-div{
+    margin-top: 75px;
+}
+
+.search-button{
+    float: left;
+    margin-top: 30px;
+}
+.selectpicker{
+    direction: rtl;
+    float: right;
+    height: 40px;
+    width: auto;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    border-bottom: solid 2px #5bc0de;
+}
+/*.container {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+}*/
+
+.galleryItem {
+    color: #797478;
+    font: 10px/1.5 Verdana, Helvetica, sans-serif;
+    float: left;
+    width: 16%;
+    margin:  2% 2% 50px 2%;
+    height: 350px;
+}
+
+.hvr-grow{
+    cursor: pointer;
+}
+.galleryItem h3 {
+    text-transform: uppercase;
+}
+
+.galleryItem img {
+    max-width: 100%;
+    max-height: 100px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+    .galleryItem {width: 21%;}
+}
+
+
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+    .galleryItem {width: 21%;}
+}
+
+
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+    .galleryItem {width: 29.33333%;}
+}
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+    .galleryItem {width: 29.33333%;}
+}
+
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+    .galleryItem {width: 21%;}
+}
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+    .galleryItem {width: 29.33333%;}
+}
+
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+    .galleryItem {width: 46%;}
+}
+
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+    .galleryItem {width: 96%;}
+    .galleryItem img {width: 96%;}
+    .galleryItem h3 {font-size: 18px;}
+    .galleryItem p {font-size: 18px;}
+}

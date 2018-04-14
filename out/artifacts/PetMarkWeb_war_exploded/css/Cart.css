@@ -1,0 +1,13 @@
+.cartDescriptionDiv label{
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+.cartDescriptionDiv p{
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+
+.cartDescriptionDiv hr{
+    border-top: 1px solid rgba(30, 28, 28, 0.51);
+}

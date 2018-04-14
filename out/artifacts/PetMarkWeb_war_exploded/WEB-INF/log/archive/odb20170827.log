@@ -1,0 +1,49 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-08-27 13:59:19 #1 store] 
+Database 'C:\Users\davej\IdeaProjects\PetMarkProject\out\artifacts\PetMarkWeb_war_exploded\WEB-INF\db\MarkPet2.odb' is opened by 13084@DESKTOP-7GOSAU4
+
+[2017-08-27 13:59:20 #2 type] 
+Type websites.WebSite is not enhanced.
+
+[2017-08-27 13:59:20 #3 type] 
+Type Products.Product is not enhanced.
+
+[2017-08-27 13:59:20 #4 type] 
+Type Products.ProductModel is not enhanced.
+
+[2017-08-27 13:59:20 #5 type] 
+Type Products.ProductCompare is not enhanced.
+
+[2017-08-27 13:59:20 #6 type] 
+Type Comments.Comment is not enhanced.
+
+[2017-08-27 13:59:20 #7 type] 
+Type DataBase.User is not enhanced.
+
+[2017-08-27 14:02:12 #8 store] 
+Database 'C:\Users\davej\IdeaProjects\PetMarkProject\out\artifacts\PetMarkWeb_war_exploded\WEB-INF\db\MarkPet2.odb' is closed by 13084@DESKTOP-7GOSAU4
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-08-27 14:06:11 #1 store] 
+Database 'C:\Users\davej\IdeaProjects\PetMarkProject\out\artifacts\PetMarkWeb_war_exploded\WEB-INF\db\MarkPet2.odb' is opened by 6212@DESKTOP-7GOSAU4
+
+[2017-08-27 14:06:11 #2 type] 
+Type websites.WebSite is not enhanced.
+
+[2017-08-27 14:06:11 #3 type] 
+Type Products.Product is not enhanced.
+
+[2017-08-27 14:06:11 #4 type] 
+Type Products.ProductModel is not enhanced.
+
+[2017-08-27 14:06:11 #5 type] 
+Type Products.ProductCompare is not enhanced.
+
+[2017-08-27 14:06:11 #6 type] 
+Type Comments.Comment is not enhanced.
+
+[2017-08-27 14:06:11 #7 type] 
+Type DataBase.User is not enhanced.
+

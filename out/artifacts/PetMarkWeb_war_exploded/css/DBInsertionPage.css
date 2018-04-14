@@ -1,0 +1,76 @@
+
+
+.fa-fa-Disabled{
+    color: lightgrey;
+}
+
+.col-lg-6.inputData input[type='text']{
+    direction: ltr;
+    margin-right: 12em;
+    width: 20em;
+}
+
+.inputData label{
+    position: absolute;
+}
+
+.pageSeparate{
+    margin-right: 7px;
+}
+
+.inputData select{
+    margin-right: 12em;
+}
+
+.inputData div{
+    width: 400px;
+}
+
+/*.col-lg-8{*/
+    /*float: right;*/
+/*}*/
+
+.col-lg-6{
+    float: right;
+}
+
+.messageBox{
+    font-size: 12px;
+    direction: ltr;
+    overflow-x: auto;
+    overflow-y: auto;
+    resize: vertical;
+    width: 540px;
+    height: 330px;
+}
+
+
+.ui-progressbar {
+    position: relative;
+
+}
+
+#progressbar .ui-progressbar-value{
+    background: #42edb0;
+}
+.progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.messageBoxBtns{
+    text-align: center;
+}
+
+.messageBoxBtns button{
+    margin: 10px;
+}
+
+#progressbar{
+    display: none;
+    margin: 15px;
+}
+

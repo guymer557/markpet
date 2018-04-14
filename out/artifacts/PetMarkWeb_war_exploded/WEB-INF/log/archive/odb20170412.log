@@ -1,0 +1,64 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-04-12 19:18:38 #1 server] 
+Server on port 6136 has started by 19160@DESKTOP-7GOSAU4
+
+[2017-04-12 19:19:01 #2 server] 
+java.lang.IllegalArgumentException: The file: ? doesn't exist.
+	at java.awt.Desktop.checkFileValidation(Unknown Source)
+	at java.awt.Desktop.open(Unknown Source)
+	at com.objectdb.o.ServerTrayIcon.actionPerformed(ServerTrayIcon.java:217)
+	at java.awt.MenuItem.processActionEvent(Unknown Source)
+	at java.awt.MenuItem.processEvent(Unknown Source)
+	at java.awt.MenuComponent.dispatchEventImpl(Unknown Source)
+	at java.awt.MenuComponent.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-04-13 11:21:59 #3 server] 
+java.lang.IllegalArgumentException: The file: ? doesn't exist.
+	at java.awt.Desktop.checkFileValidation(Unknown Source)
+	at java.awt.Desktop.open(Unknown Source)
+	at com.objectdb.o.ServerTrayIcon.actionPerformed(ServerTrayIcon.java:217)
+	at java.awt.MenuItem.processActionEvent(Unknown Source)
+	at java.awt.MenuItem.processEvent(Unknown Source)
+	at java.awt.MenuComponent.dispatchEventImpl(Unknown Source)
+	at java.awt.MenuComponent.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+[2017-04-13 11:28:24 #4 server] 
+Server on port 6136 has stopped by 19160@DESKTOP-7GOSAU4
+
